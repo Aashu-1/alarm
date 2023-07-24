@@ -1,6 +1,6 @@
 var input = parseFloat(document.getElementById("inpt").value);
-var closeAlert = document.getElementById("closeAlert");
-var alertPop = document.getElementById("alert");
+
+
 var result = document.getElementById("result");
 var audio = new Audio("./public/clock-alarm-8761.mp3");
 var ringBell = document.getElementById("ringBell");
@@ -17,10 +17,8 @@ function setAlarm(e) {
   if (isValid) {
     let timeForRing = input * 1000 * 60;
     //FOR MESSAGE ALERT
-    alertPop.style.display = "block";
-    closeAlert.addEventListener("click", () => {
-      alertPop.style.display = "none";
-    });
+  
+   
 
     var msg = `Your alarm has set for ${input} minutes`;
     localStorage.setItem("set", msg);
@@ -41,7 +39,7 @@ function setAlarm(e) {
         localStorage.removeItem("set");
         result.innerHTML = "";
         document.getElementById("inpt").value = "";
-        alertPop.style.display = "none";
+       
       });
     }, timeForRing);
   } else {
