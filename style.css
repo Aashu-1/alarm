@@ -1,0 +1,55 @@
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("./public/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#head {
+  font-size: 3rem;
+}
+
+#inpt {
+  min-width: 3%;
+  padding: 12px;
+  background-color: rgb(252, 247, 238);
+  font-size: 22px;
+  color: black;
+  height: 10px;
+}
+
+#btn {
+  padding: 11px;
+  border: none;
+  font-size: 15px;
+  background-color: #fb8d64;
+  color: black;
+  cursor: pointer;
+}
+
+#notValid {
+  color: red;
+  font-weight: bold;
+}
+
+.ring {
+  display: none;
+}
+
+#alert {
+  display: none;
+}
+
+.bellBorder {
+  border: 1px solid black;
+}
